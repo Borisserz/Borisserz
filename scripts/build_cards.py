@@ -20,7 +20,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_static import (  # noqa: E402
@@ -303,6 +303,10 @@ def truncate(text, max_chars):
 OSS_MARK_START = "<!-- oss:start -->"
 OSS_MARK_END = "<!-- oss:end -->"
 OSS_CDN = "https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets"
+ACTIVITY_URL_RE = re.compile(
+    r"(https://cdn\.jsdelivr\.net/gh/Borisserz/Borisserz@main/assets/"
+    r"activity-(?:dark|light)\.svg)(?:\?v=[^\"\s>]*)?"
+)
 OSS_ROW_H = 48
 OSS_MERGE_H = 56
 OSS_ROW_GAP = 8
@@ -412,6 +416,23 @@ def clear_stale_oss_rows(assets):
             os.remove(path)
 
 
+def bust_activity_urls(text, token):
+    """GitHub Camo caches README images by exact URL. Bump ?v= so a new
+    activity card is fetched instead of the previous day's SVG."""
+    return ACTIVITY_URL_RE.sub(r"\1?v=%s" % token, text)
+
+
+def patch_readme_activity_bust(token):
+    readme = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), os.pardir, "README.md")
+    text = open(readme, encoding="utf-8").read()
+    updated = bust_activity_urls(text, token)
+    if updated == text and "activity-dark.svg?v=" not in text:
+        sys.exit("could not find activity card URLs in README.md")
+    open(readme, "w", encoding="utf-8").write(updated)
+    print("wrote README.md activity cache-bust v=%s" % token)
+
+
 def patch_readme_oss(block):
     readme = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), os.pardir, "README.md")
@@ -460,6 +481,8 @@ def render(data):
     for theme, p in PALETTES.items():
         write(os.path.join(assets, "activity-%s.svg" % theme), activity_card(data, p))
     write_oss(data, assets)
+    patch_readme_activity_bust(
+        datetime.now(timezone.utc).strftime("%Y%m%d%H%M"))
 
     print("contributions=%s current_streak=%s external_repos=%s merged=%s" % (
         data["contributions"], data["current_streak"],
