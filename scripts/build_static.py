@@ -183,8 +183,10 @@ def badge(label, p):
 
 
 def write(path, content):
-    assert content.isascii(), "non-ASCII output would corrupt %s" % path
-    with open(path, "w", encoding="ascii") as fh:
+    # Unicode is fine in SVG; control characters are what break GitHub's parser.
+    if any(ord(c) < 32 and c not in "\n\t\r" for c in content):
+        raise ValueError("control characters in %s" % path)
+    with open(path, "w", encoding="utf-8") as fh:
         fh.write(content)
     print("wrote %s" % path)
 

@@ -177,14 +177,23 @@ def parse(user, pr_items):
     languages = [(name, size * 100.0 / total_bytes) for name, size in languages]
 
     external = {}
+    merges = []
     for item in pr_items:
         repo = "/".join(item["repository_url"].split("/")[-2:])
         entry = external.setdefault(repo, {"prs": 0, "merged": 0})
         entry["prs"] += 1
-        if (item.get("pull_request") or {}).get("merged_at"):
+        pr = item.get("pull_request") or {}
+        if pr.get("merged_at"):
             entry["merged"] += 1
+            merges.append({
+                "repo": repo,
+                "number": item["number"],
+                "title": item.get("title") or "",
+                "merged_at": pr["merged_at"],
+            })
 
     rows = sorted(external.items(), key=lambda kv: (-kv[1]["merged"], -kv[1]["prs"], kv[0]))
+    merges.sort(key=lambda r: r["merged_at"], reverse=True)
 
     return {
         "contributions": calendar["totalContributions"],
@@ -194,6 +203,7 @@ def parse(user, pr_items):
         "languages": languages,
         "external": rows,
         "external_merged": sum(v["merged"] for _, v in rows),
+        "latest_merges": merges[:3],
     }
 
 
@@ -281,13 +291,24 @@ def activity_card(data, p):
     return out
 
 
+def truncate(text, max_chars):
+    text = " ".join(text.split())
+    if len(text) <= max_chars:
+        return text
+    return text[: max_chars - 1].rstrip(" .,;:-") + "..."
+
+
 def oss_card(data, p):
-    rows = data["external"][:10]
+    rows = data["external"][:8]
+    merges = data.get("latest_merges") or []
     hidden = len(data["external"]) - len(rows)
     row_h = 48
+    merge_h = 56
     row_gap = 8
     top = 30
-    height = top + len(rows) * (row_h + row_gap) + (30 if hidden else 0)
+    repo_block = top + len(rows) * (row_h + row_gap) + (24 if hidden else 0)
+    merge_top = repo_block + (36 if merges else 0)
+    height = merge_top + len(merges) * (merge_h + row_gap)
 
     summary = "Pull requests to %d repositories I do not own, %d merged." % (
         len(data["external"]), data["external_merged"])
@@ -317,7 +338,25 @@ def oss_card(data, p):
 
     if hidden:
         out += ('  <text x="0" y="%d" font-family="%s" font-size="18" fill="%s">'
-                'and %d more</text>\n' % (y + 18, SANS, p["muted"], hidden))
+                'and %d more</text>\n' % (y + 16, SANS, p["muted"], hidden))
+
+    if merges:
+        out += ('  <text x="0" y="%d" font-family="%s" font-size="18" font-weight="600" '
+                'letter-spacing="1.4" fill="%s">Latest merges</text>\n'
+                % (merge_top - 12, SANS, p["muted"]))
+        y = merge_top
+        for merge in merges:
+            label = "%s#%s" % (merge["repo"], merge["number"])
+            title = truncate(merge["title"], 72)
+            out += ('  <rect x="0" y="%d" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
+                    % (y, WIDTH, merge_h, p["panel"], p["border"]))
+            out += '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n' % (
+                y + merge_h // 2, p["accent"])
+            out += ('  <text x="40" y="%d" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+                    % (y + 22, SANS, p["accent"], esc(label)))
+            out += ('  <text x="40" y="%d" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+                    % (y + 44, SANS, p["text"], esc(title)))
+            y += merge_h + row_gap
 
     out += "</svg>\n"
     return out

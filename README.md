@@ -51,16 +51,8 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">
-  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts per repository.">
+  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
-
-Merged elsewhere:
-
-- [OneBusAway/onebusaway-ios#1220](https://github.com/OneBusAway/onebusaway-ios/pull/1220) — numeric-aware sorting for route filters, so `Route 2` no longer lands after `Route 10`.
-- [greenjacketcoder/reveille#6](https://github.com/greenjacketcoder/reveille/pull/6) — meeting-provider detection extended to Webex, GoToMeeting and Jitsi.
-- [inequitas/performancemonitor#7](https://github.com/inequitas/performancemonitor/pull/7) — keyboard-accessible drag reordering in Settings.
-
-Open pull requests sit with [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount/pulls?q=author%3ABorisserz), [StanfordSpezi/SpeziFirebase](https://github.com/StanfordSpezi/SpeziFirebase/pulls?q=author%3ABorisserz) and [brightdigit/CelestraKit](https://github.com/brightdigit/CelestraKit/pulls?q=author%3ABorisserz).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/sec-stack-dark.svg">
