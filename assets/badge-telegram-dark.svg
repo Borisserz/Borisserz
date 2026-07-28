@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 44" width="131" height="44" role="img" aria-label="Telegram">
+  <rect x="0.5" y="0.5" width="130" height="43" rx="11" fill="#2C2C31" stroke="#3B3B41"/>
+  <circle cx="18" cy="22" r="4" fill="#F05138"/>
+  <text x="32" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Telegram</text>
+</svg>

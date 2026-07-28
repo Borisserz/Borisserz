@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 352" width="1200" height="352" role="img" aria-label="iOS: Swift, SwiftUI, SwiftData, WidgetKit, Live Activities, Core ML, Vision, watchOS; Backend: Python, FastAPI, Java, Node.js, Firebase, Docker; Data &amp; AI: pandas, NumPy, DuckDB, ClickHouse, LangChain, LangGraph, Airflow; Web &amp; tooling: TypeScript, React, Tailwind, Xcode, GitHub Actions, pytest">
+  <text x="0" y="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">iOS</text>
+  <rect x="0" y="26" width="88" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="18" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Swift</text>
+  <rect x="98" y="26" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="116" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">SwiftUI</text>
+  <rect x="216" y="26" width="129" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="234" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">SwiftData</text>
+  <rect x="355" y="26" width="129" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="373" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">WidgetKit</text>
+  <rect x="494" y="26" width="192" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="512" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Live Activities</text>
+  <rect x="696" y="26" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="714" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Core ML</text>
+  <rect x="814" y="26" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="832" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Vision</text>
+  <rect x="922" y="26" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="940" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">watchOS</text>
+  <text x="0" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">Backend</text>
+  <rect x="0" y="114" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="18" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Python</text>
+  <rect x="108" y="114" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="126" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">FastAPI</text>
+  <rect x="226" y="114" width="77" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="244" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Java</text>
+  <rect x="313" y="114" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="331" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Node.js</text>
+  <rect x="431" y="114" width="119" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="449" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Firebase</text>
+  <rect x="560" y="114" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="578" y="140" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Docker</text>
+  <text x="0" y="190" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">Data &amp; AI</text>
+  <rect x="0" y="202" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="18" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">pandas</text>
+  <rect x="108" y="202" width="88" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="126" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">NumPy</text>
+  <rect x="206" y="202" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="224" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">DuckDB</text>
+  <rect x="314" y="202" width="140" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="332" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">ClickHouse</text>
+  <rect x="464" y="202" width="129" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="482" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">LangChain</text>
+  <rect x="603" y="202" width="129" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="621" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">LangGraph</text>
+  <rect x="742" y="202" width="108" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="760" y="228" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Airflow</text>
+  <text x="0" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">Web &amp; tooling</text>
+  <rect x="0" y="290" width="140" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="18" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">TypeScript</text>
+  <rect x="150" y="290" width="88" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="168" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">React</text>
+  <rect x="248" y="290" width="119" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="266" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Tailwind</text>
+  <rect x="377" y="290" width="88" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="395" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Xcode</text>
+  <rect x="475" y="290" width="181" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="493" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">GitHub Actions</text>
+  <rect x="666" y="290" width="98" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="684" y="316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">pytest</text>
+</svg>
