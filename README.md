@@ -36,17 +36,6 @@
   <img src="assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
 </picture>
 
-<p align="center">
-  <a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106"><img src="assets/apps/workouttracker-icon.png" width="96" height="96" alt="AI Workout Coach & Gym Tracker app icon"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345"><img src="assets/apps/foodtracker-icon.png" width="96" height="96" alt="FoodTracker: AI Macro Tracker app icon"></a>
-</p>
-<p align="center">
-  <a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106"><img src="assets/apps/download-on-app-store.svg" alt="Download WorkoutTracker on the App Store" height="40"></a>
-  &nbsp;&nbsp;
-  <a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345"><img src="assets/apps/download-on-app-store.svg" alt="Download FoodTracker on the App Store" height="40"></a>
-</p>
-
 - **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** ([App Store](https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106)) — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
 - **[FoodTracker](https://github.com/Borisserz/FoodTracker)** ([App Store](https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345)) — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
 - **[Yoga](https://github.com/Borisserz/Yoga)** — yoga companion with real-time pose tracking on `VNHumanBodyPoseObservation`, per-pose joint-angle analysis, spoken feedback and a Firestore leaderboard.
@@ -85,5 +74,6 @@
 
 [![Telegram](assets/badge-telegram-dark.svg)](https://t.me/borisserz)
 [![LinkedIn](assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
+[![App Store](assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
 
 <sub>The activity and open-source cards above are regenerated daily by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>

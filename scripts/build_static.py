@@ -64,7 +64,7 @@ STACK = [
                        "Xcode", "Figma", "GitHub Actions", "pytest"]),
 ]
 
-BADGES = [("telegram", "Telegram"), ("linkedin", "LinkedIn")]
+BADGES = [("telegram", "Telegram"), ("linkedin", "LinkedIn"), ("appstore", "App Store")]
 
 CHIP_H = 40
 CHIP_PAD = 18
