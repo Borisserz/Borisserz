@@ -36,8 +36,19 @@
   <img src="assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
 </picture>
 
-- **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
-- **[FoodTracker](https://github.com/Borisserz/FoodTracker)** — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
+<p align="center">
+  <a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106"><img src="assets/apps/workouttracker-icon.png" width="96" height="96" alt="AI Workout Coach & Gym Tracker app icon"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345"><img src="assets/apps/foodtracker-icon.png" width="96" height="96" alt="FoodTracker: AI Macro Tracker app icon"></a>
+</p>
+<p align="center">
+  <a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106"><img src="assets/apps/download-on-app-store.svg" alt="Download WorkoutTracker on the App Store" height="40"></a>
+  &nbsp;&nbsp;
+  <a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345"><img src="assets/apps/download-on-app-store.svg" alt="Download FoodTracker on the App Store" height="40"></a>
+</p>
+
+- **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** ([App Store](https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106)) — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
+- **[FoodTracker](https://github.com/Borisserz/FoodTracker)** ([App Store](https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345)) — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
 - **[Yoga](https://github.com/Borisserz/Yoga)** — yoga companion with real-time pose tracking on `VNHumanBodyPoseObservation`, per-pose joint-angle analysis, spoken feedback and a Firestore leaderboard.
 - **[Stepper](https://github.com/Borisserz/Stepper)** — pedometer and route tracker on MapKit and Core Location. Work in progress, UI-first.
 - **[prototip](https://github.com/Borisserz/prototip)** — multi-tenant BI platform where a plain-language question becomes SQL, charts and a report. LangGraph orchestrator, ClickHouse warehouse with a vector store for RAG, React front end.
