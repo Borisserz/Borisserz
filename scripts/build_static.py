@@ -51,15 +51,17 @@ STATUS = [
     ("Open to iOS internships", True),
 ]
 
-# Every entry below is backed by code in the repositories, not aspiration.
+# Every entry below is backed by code in the repositories / resume, not aspiration.
 STACK = [
-    ("iOS", ["Swift", "SwiftUI", "SwiftData", "WidgetKit",
-             "Live Activities", "Core ML", "Vision", "watchOS"]),
+    ("iOS", ["Swift", "SwiftUI", "SwiftData", "Swift Charts", "WidgetKit",
+             "Live Activities", "HealthKit", "MapKit", "Core ML", "Vision",
+             "watchOS"]),
+    ("Patterns", ["MVVM", "Combine", "async/await", "Actors", "REST"]),
     ("Backend", ["Python", "FastAPI", "Java", "Node.js", "Firebase", "Docker"]),
-    ("Data & AI", ["pandas", "NumPy", "DuckDB", "ClickHouse",
-                   "LangChain", "LangGraph", "Airflow"]),
-    ("Web & tooling", ["TypeScript", "React", "Tailwind", "Xcode",
-                       "GitHub Actions", "pytest"]),
+    ("Data & AI", ["Vertex AI", "Gemini", "pandas", "NumPy", "DuckDB",
+                   "ClickHouse", "LangChain", "LangGraph", "Airflow"]),
+    ("Web & tooling", ["TypeScript", "React", "Tailwind", "Framer Motion",
+                       "Xcode", "Figma", "GitHub Actions", "pytest"]),
 ]
 
 BADGES = [("telegram", "Telegram"), ("linkedin", "LinkedIn")]

@@ -71,7 +71,7 @@ Open pull requests sit with [StanfordSpezi/SpeziAccount](https://github.com/Stan
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-  <img src="assets/stack-dark.svg" width="100%" alt="iOS: Swift, SwiftUI, SwiftData, WidgetKit, Live Activities, Core ML, Vision, watchOS. Backend: Python, FastAPI, Java, Node.js, Firebase, Docker. Data and AI: pandas, NumPy, DuckDB, ClickHouse, LangChain, LangGraph, Airflow. Web and tooling: TypeScript, React, Tailwind, Xcode, GitHub Actions, pytest.">
+  <img src="assets/stack-dark.svg" width="100%" alt="iOS, patterns, backend, data and AI, web and tooling stack.">
 </picture>
 
 <picture>
