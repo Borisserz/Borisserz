@@ -25,6 +25,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      # A personal token is needed so the contribution total matches the one the
+      # profile graph shows. Until it exists the data cards are left untouched
+      # rather than rewritten with a lower, public-only number.
+      GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -35,10 +40,13 @@ jobs:
       - name: Render static assets
         run: python3 scripts/build_static.py
 
+      - name: Warn when the stats token is missing
+        if: env.GH_STATS_TOKEN == ''
+        run: echo "::warning::GH_STATS_TOKEN is not set; keeping the existing activity and open-source cards"
+
       - name: Render data cards
+        if: env.GH_STATS_TOKEN != ''
         run: python3 scripts/build_cards.py
-        env:
-          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
 
       - name: Commit refreshed cards
         run: |
