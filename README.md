@@ -13,18 +13,28 @@
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/sec-activity-light.svg">
+  <img src="assets/sec-activity-dark.svg" width="100%" alt="Activity">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
+  <img src="assets/activity-dark.svg" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-light.svg">
+  <img src="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg" width="100%" alt="A snake eating its way through the contribution calendar.">
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/sec-apps-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/sec-apps-light.svg">
   <img src="assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
 </picture>
-
-<p>
-  <img src="assets/proof/workouttracker-overview.png" width="270" alt="WorkoutTracker daily overview with activity rings and a muscle-group load chart.">
-  <img src="assets/proof/workouttracker-coach.png" width="270" alt="WorkoutTracker Neural Coach screen showing a CNS readiness index.">
-  <img src="assets/proof/workouttracker-analytics.png" width="270" alt="WorkoutTracker analytics with total volume, sets and a max-weight chart.">
-</p>
-
-*WorkoutTracker: daily overview, on-device Neural Coach, training analytics.*
 
 - **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
 - **[FoodTracker](https://github.com/Borisserz/FoodTracker)** — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
@@ -53,24 +63,6 @@ Merged elsewhere:
 Open pull requests sit with [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount/pulls?q=author%3ABorisserz), [StanfordSpezi/SpeziFirebase](https://github.com/StanfordSpezi/SpeziFirebase/pulls?q=author%3ABorisserz) and [brightdigit/CelestraKit](https://github.com/brightdigit/CelestraKit/pulls?q=author%3ABorisserz).
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-activity-light.svg">
-  <img src="assets/sec-activity-dark.svg" width="100%" alt="Activity">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-  <img src="assets/activity-dark.svg" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-light.svg">
-  <img src="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg" width="100%" alt="A snake eating its way through the contribution calendar.">
-</picture>
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/sec-stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/sec-stack-light.svg">
   <img src="assets/sec-stack-dark.svg" width="100%" alt="Stack">
@@ -88,15 +80,7 @@ Open pull requests sit with [StanfordSpezi/SpeziAccount](https://github.com/Stan
   <img src="assets/sec-contact-dark.svg" width="100%" alt="Contact">
 </picture>
 
-<a href="https://t.me/borisserz"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-telegram-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/badge-telegram-light.svg">
-  <img src="assets/badge-telegram-dark.svg" alt="Telegram">
-</picture></a>
-<a href="https://www.linkedin.com/in/boris-serzhanovich-87b95b296"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/badge-linkedin-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/badge-linkedin-light.svg">
-  <img src="assets/badge-linkedin-dark.svg" alt="LinkedIn">
-</picture></a>
+[![Telegram](assets/badge-telegram-dark.svg)](https://t.me/borisserz)
+[![LinkedIn](assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
 
 <sub>The activity and open-source cards above are regenerated daily by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>
