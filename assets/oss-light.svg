@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 730" width="1200" height="730" role="img" aria-label="Pull requests to 11 repositories I do not own, 6 merged.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 730" width="1200" height="730" role="img" aria-label="Pull requests to 12 repositories I do not own, 6 merged.">
   <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6E6E73">Pull requests to repositories I do not own</text>
   <rect x="0" y="30" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="54" r="4" fill="#F05138"/>
@@ -7,7 +7,7 @@
   <rect x="0" y="86" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="110" r="4" fill="#F05138"/>
   <text x="40" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">OneBusAway/onebusaway-ios</text>
-  <text x="1180" y="117" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#F05138">1 merged</tspan><tspan fill="#6E6E73"> &#183; 5 PRs</tspan></text>
+  <text x="1180" y="117" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#F05138">1 merged</tspan><tspan fill="#6E6E73"> &#183; 8 PRs</tspan></text>
   <rect x="0" y="142" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="166" r="4" fill="#F05138"/>
   <text x="40" y="173" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">greenjacketcoder/reveille</text>
@@ -22,17 +22,17 @@
   <text x="1180" y="285" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#F05138">1 merged</tspan><tspan fill="#6E6E73"> &#183; 1 PR</tspan></text>
   <rect x="0" y="310" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="334" r="4" fill="#6E6E73"/>
-  <text x="40" y="341" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">StanfordSpezi/SpeziAccount</text>
-  <text x="1180" y="341" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#6E6E73">1 PR</tspan></text>
+  <text x="40" y="341" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">CodeEditApp/CodeEdit</text>
+  <text x="1180" y="341" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#6E6E73">2 PRs</tspan></text>
   <rect x="0" y="366" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="390" r="4" fill="#6E6E73"/>
-  <text x="40" y="397" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">StanfordSpezi/SpeziFirebase</text>
+  <text x="40" y="397" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">StanfordSpezi/SpeziAccount</text>
   <text x="1180" y="397" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#6E6E73">1 PR</tspan></text>
   <rect x="0" y="422" width="1200" height="48" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="446" r="4" fill="#6E6E73"/>
-  <text x="40" y="453" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">brightdigit/CelestraKit</text>
+  <text x="40" y="453" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#262626">StanfordSpezi/SpeziFirebase</text>
   <text x="1180" y="453" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#6E6E73">1 PR</tspan></text>
-  <text x="0" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6E6E73">and 3 more</text>
+  <text x="0" y="494" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6E6E73">and 4 more</text>
   <text x="0" y="526" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#6E6E73">Latest merges</text>
   <rect x="0" y="538" width="1200" height="56" rx="10" fill="#F0F0F3" stroke="#D8D8DC"/>
   <circle cx="20" cy="566" r="4" fill="#F05138"/>
