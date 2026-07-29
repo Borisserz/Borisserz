@@ -76,4 +76,4 @@
 [![LinkedIn](assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
 [![App Store](assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
 
-<sub>The activity and open-source cards above are regenerated daily by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>
+<sub>The activity and open-source cards above are regenerated every few hours by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>

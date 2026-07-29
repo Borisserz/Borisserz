@@ -6,7 +6,9 @@ name: Cards
 
 on:
   schedule:
-    - cron: "0 4 * * *"
+    # Every 6 hours. GitHub may delay cron jobs by up to ~1h; daily was too stale
+    # for OSS merges that land the same day.
+    - cron: "15 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -32,6 +34,9 @@ jobs:
       GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history so rebase/push against concurrent bot commits is reliable.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -48,14 +53,45 @@ jobs:
         if: env.GH_STATS_TOKEN != ''
         run: python3 scripts/build_cards.py
 
+      - name: Bust CDN cache on dynamic cards
+        if: env.GH_STATS_TOKEN != ''
+        run: |
+          # GitHub Camo caches same-path images aggressively. Stamp activity/oss
+          # URLs in the README so a refresh is visible without hard-reloading for days.
+          export CARD_STAMP=$(date -u +%Y%m%d%H%M)
+          python3 - <<'PY'
+          import os, pathlib, re
+          stamp = os.environ["CARD_STAMP"]
+          path = pathlib.Path("README.md")
+          text = path.read_text()
+          text2 = re.sub(
+              r"(assets/(?:activity|oss)-(?:dark|light)\.svg)(?:\?v=\d+)?",
+              rf"\1?v={stamp}",
+              text,
+          )
+          text2 = re.sub(
+              r"regenerated (?:daily|every few hours)",
+              "regenerated every few hours",
+              text2,
+              count=1,
+          )
+          if text2 != text:
+              path.write_text(text2)
+              print(f"README cache-bust stamp={stamp}")
+          else:
+              print("README already stamped or no matches")
+          PY
+
       - name: Commit refreshed cards
         run: |
-          if [ -z "$(git status --porcelain -- assets)" ]; then
+          if [ -z "$(git status --porcelain -- assets README.md)" ]; then
             echo "cards unchanged"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
+          git add assets README.md
           git commit -m "chore: refresh profile cards"
-          git push
+          # Rebase onto latest main in case another push landed during the run.
+          git pull --rebase origin main
+          git push origin HEAD:main
