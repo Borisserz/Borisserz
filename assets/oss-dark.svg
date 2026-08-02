@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 730" width="1200" height="730" role="img" aria-label="Pull requests to 12 repositories I do not own, 8 merged.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 730" width="1200" height="730" role="img" aria-label="Pull requests to 12 repositories I do not own, 11 merged.">
   <text x="0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#8E8E93">Pull requests to repositories I do not own</text>
   <rect x="0" y="30" width="1200" height="48" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="20" cy="54" r="4" fill="#F05138"/>
   <text x="40" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#DFDFE0">OneBusAway/onebusaway-ios</text>
-  <text x="1180" y="61" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#F05138">3 merged</tspan><tspan fill="#8E8E93"> &#183; 9 PRs</tspan></text>
+  <text x="1180" y="61" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20"><tspan fill="#F05138">6 merged</tspan><tspan fill="#8E8E93"> &#183; 9 PRs</tspan></text>
   <rect x="0" y="86" width="1200" height="48" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="20" cy="110" r="4" fill="#F05138"/>
   <text x="40" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#DFDFE0">chattymin/PokeTokenBar</text>
@@ -36,14 +36,14 @@
   <text x="0" y="526" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">Latest merges</text>
   <rect x="0" y="538" width="1200" height="56" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="20" cy="566" r="4" fill="#F05138"/>
-  <text x="40" y="560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">OneBusAway/onebusaway-ios#1242</text>
-  <text x="40" y="582" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">fix: stabilize survey checkbox JSON and lock fresh-path hero filter</text>
+  <text x="40" y="560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">OneBusAway/onebusaway-ios#1241</text>
+  <text x="40" y="582" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">refactor: replace DispatchQueue debounce/throttle with MainActor utilit...</text>
   <rect x="0" y="602" width="1200" height="56" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="20" cy="630" r="4" fill="#F05138"/>
-  <text x="40" y="624" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">OneBusAway/onebusaway-ios#1232</text>
-  <text x="40" y="646" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">fix: make date strategy symmetric in RegionsFileStorage</text>
+  <text x="40" y="624" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">OneBusAway/onebusaway-ios#1243</text>
+  <text x="40" y="646" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">fix: switch Dynamic Island to the newest tracked trip</text>
   <rect x="0" y="666" width="1200" height="56" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="20" cy="694" r="4" fill="#F05138"/>
-  <text x="40" y="688" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">chattymin/PokeTokenBar#125</text>
-  <text x="40" y="710" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">feat: add Cursor IDE as a usage provider (#115)</text>
+  <text x="40" y="688" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#F05138">OneBusAway/onebusaway-ios#1253</text>
+  <text x="40" y="710" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#DFDFE0">feat: hide MapKit Points of Interest from the Map sheet</text>
 </svg>
