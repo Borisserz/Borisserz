@@ -19,9 +19,9 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=202608090717">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=202608090717">
-  <img src="assets/activity-dark.svg?v=202608090717" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=202608091315">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=202608091315">
+  <img src="assets/activity-dark.svg?v=202608091315" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
 </picture>
 
 <picture>
@@ -49,9 +49,9 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg?v=202608090717">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg?v=202608090717">
-  <img src="assets/oss-dark.svg?v=202608090717" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg?v=202608091315">
+  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg?v=202608091315">
+  <img src="assets/oss-dark.svg?v=202608091315" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
 
 <picture>
