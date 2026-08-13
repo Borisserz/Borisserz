@@ -6,6 +6,10 @@
 
 **Native iOS developer**, third-year CS student at BSUIR in Minsk. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Borisserz&style=flat-square&color=F05138&label=Profile+views" alt="Profile views">
+</p>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/status-light.svg">
@@ -40,7 +44,7 @@
 - **[FoodTracker](https://github.com/Borisserz/FoodTracker)** ([App Store](https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345)) — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
 - **[Yoga](https://github.com/Borisserz/Yoga)** — yoga companion with real-time pose tracking on `VNHumanBodyPoseObservation`, per-pose joint-angle analysis, spoken feedback and a Firestore leaderboard.
 - **[Stepper](https://github.com/Borisserz/Stepper)** — pedometer and route tracker on MapKit and Core Location. Work in progress, UI-first.
-- **[FitRPG](https://github.com/Borisserz/rpg-fitness)** (fork of [moggerrescure/rpg-fitness](https://github.com/moggerrescure/rpg-fitness)) — fitness RPG: on-device camera rep tracking powers Arena PvP, clans, raids and quest islands. SwiftUI, HealthKit, Firebase. Free, no IAP.
+- **[FitRPG](https://github.com/Borisserz/rpg-fitness)** ([App Store](https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478)) — fitness RPG: on-device camera rep tracking powers Arena PvP, clans, raids and quest islands. SwiftUI, HealthKit, Firebase. Free, no IAP.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/sec-open-source-dark.svg">
