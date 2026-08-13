@@ -6,10 +6,6 @@
 
 **Native iOS developer**, third-year CS student at BSUIR in Minsk. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Borisserz&style=flat-square&color=F05138&label=Profile+views" alt="Profile views">
-</p>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/status-light.svg">
@@ -79,5 +75,9 @@
 [![Telegram](assets/badge-telegram-dark.svg)](https://t.me/borisserz)
 [![LinkedIn](assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
 [![App Store](assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Borisserz&style=flat-square&color=F05138&label=Profile+views" alt="Profile views">
+</p>
 
 <sub>The activity and open-source cards above are regenerated every few hours by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>
