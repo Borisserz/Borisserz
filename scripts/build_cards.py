@@ -6,14 +6,16 @@ profile never depends on a third-party rendering service staying online.
 
 Two cards are produced per theme:
   activity-<theme>.svg  contribution counters, streaks and language split
-  oss-<theme>.svg       pull requests opened against repositories I do not own
+  oss-repo-NN-<theme>.svg  one clickable row per external repository
 
 If any request fails the script exits non-zero *before* touching the existing
 files. A stale card is bad; a blank or wrong card is worse.
 """
 
+import glob
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -298,68 +300,174 @@ def truncate(text, max_chars):
     return text[: max_chars - 1].rstrip(" .,;:-") + "..."
 
 
-def oss_card(data, p):
+OSS_ROW_H = 48
+OSS_MERGE_H = 56
+OSS_ROW_GAP = 8
+OSS_CAPTION_H = 28
+OSS_MORE_H = 28
+OSS_MERGES_CAPTION_H = 32
+OSS_MARK_START = "<!-- oss:start -->"
+OSS_MARK_END = "<!-- oss:end -->"
+
+
+def svg_doc(height, label, body):
+    return svg_open(height, label) + body + "</svg>\n"
+
+
+def oss_caption_svg(text, height, p, weight=""):
+    weight_attr = ' font-weight="600" letter-spacing="1.4"' if weight else ""
+    return svg_doc(
+        height, text,
+        '  <text x="0" y="%d" font-family="%s" font-size="18"%s fill="%s">%s</text>\n'
+        % (height - 10, SANS, weight_attr, p["muted"], esc(text)))
+
+
+def oss_repo_svg(repo, stat, p):
+    height = OSS_ROW_H + OSS_ROW_GAP
+    prs = "%d PR%s" % (stat["prs"], "" if stat["prs"] == 1 else "s")
+    stats = (
+        '<tspan fill="%s">%d merged</tspan><tspan fill="%s"> &#183; %s</tspan>'
+        % (p["accent"], stat["merged"], p["muted"], prs)
+        if stat["merged"] else
+        '<tspan fill="%s">%s</tspan>' % (p["muted"], prs)
+    )
+    body = (
+        '  <rect x="0" y="0" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
+        '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n'
+        '  <text x="40" y="31" font-family="%s" font-size="22" fill="%s">%s</text>\n'
+        '  <text x="%d" y="31" text-anchor="end" font-family="%s" font-size="20">'
+        '%s</text>\n'
+        % (WIDTH, OSS_ROW_H, p["panel"], p["border"],
+           OSS_ROW_H // 2, p["accent"] if stat["merged"] else p["muted"],
+           SANS, p["text"], esc(repo),
+           WIDTH - 20, SANS, stats)
+    )
+    return svg_doc(height, repo, body)
+
+
+def oss_merge_svg(merge, p):
+    height = OSS_MERGE_H + OSS_ROW_GAP
+    label = "%s#%s" % (merge["repo"], merge["number"])
+    title = truncate(merge["title"], 72)
+    body = (
+        '  <rect x="0" y="0" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
+        '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n'
+        '  <text x="40" y="22" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+        '  <text x="40" y="44" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+        % (WIDTH, OSS_MERGE_H, p["panel"], p["border"],
+           OSS_MERGE_H // 2, p["accent"],
+           SANS, p["accent"], esc(label),
+           SANS, p["text"], esc(title))
+    )
+    return svg_doc(height, label, body)
+
+
+def md_picture(basename, alt, href=None):
+    dark = "%s-dark.svg" % basename
+    light = "%s-light.svg" % basename
+    inner = (
+        "<picture>\n"
+        '  <source media="(prefers-color-scheme: dark)" srcset="%s">\n'
+        '  <source media="(prefers-color-scheme: light)" srcset="%s">\n'
+        '  <img src="%s" width="100%%" alt="%s">\n'
+        "</picture>"
+        % (dark, light, dark, esc(alt))
+    )
+    if not href:
+        return inner
+    return '<a href="%s">\n%s\n</a>' % (esc(href), inner)
+
+
+def oss_search_url():
+    q = "is:pr author:%s -user:%s" % (LOGIN, LOGIN)
+    return "https://github.com/search?q=%s&type=pullrequests" % urllib.parse.quote(q)
+
+
+def oss_readme_block(rows, hidden, merges):
+    parts = [
+        md_picture(
+            "assets/oss-caption",
+            "Pull requests to repositories I do not own"),
+    ]
+    for index, (repo, _) in enumerate(rows):
+        parts.append(md_picture(
+            "assets/oss-repo-%02d" % index, repo,
+            "https://github.com/%s" % repo))
+    if hidden:
+        parts.append(md_picture(
+            "assets/oss-more", "and %d more" % hidden, oss_search_url()))
+    if merges:
+        parts.append(md_picture("assets/oss-merges-caption", "Latest merges"))
+        for index, merge in enumerate(merges):
+            label = "%s#%s" % (merge["repo"], merge["number"])
+            parts.append(md_picture(
+                "assets/oss-merge-%02d" % index, label,
+                "https://github.com/%s/pull/%s" % (merge["repo"], merge["number"])))
+    return "\n".join(parts)
+
+
+def clear_oss_assets(assets):
+    patterns = (
+        "oss-dark.svg", "oss-light.svg",
+        "oss-caption-*.svg", "oss-repo-*.svg", "oss-more-*.svg",
+        "oss-merges-caption-*.svg", "oss-merge-*.svg",
+    )
+    for pattern in patterns:
+        for path in glob.glob(os.path.join(assets, pattern)):
+            os.remove(path)
+
+
+def patch_readme_oss(block):
+    readme = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), os.pardir, "README.md")
+    text = open(readme, encoding="utf-8").read()
+    wrapped = "%s\n%s\n%s" % (OSS_MARK_START, block.rstrip(), OSS_MARK_END)
+    if OSS_MARK_START in text and OSS_MARK_END in text:
+        pre, rest = text.split(OSS_MARK_START, 1)
+        _, post = rest.split(OSS_MARK_END, 1)
+        text = pre + wrapped + post
+    else:
+        text, n = re.subn(
+            r"<picture>\s*"
+            r'<source media="\(prefers-color-scheme: dark\)" srcset="assets/oss-dark\.svg[^"]*">\s*'
+            r'<source media="\(prefers-color-scheme: light\)" srcset="assets/oss-light\.svg[^"]*">\s*'
+            r'<img src="assets/oss-dark\.svg[^"]*" width="100%" alt="[^"]*">\s*'
+            r"</picture>",
+            wrapped,
+            text,
+            count=1,
+        )
+        if n != 1:
+            sys.exit("could not find OSS picture block in README.md")
+    open(readme, "w", encoding="utf-8").write(text)
+    print("wrote README.md OSS links")
+
+
+def write_oss(data, assets):
     rows = data["external"][:8]
     merges = data.get("latest_merges") or []
     hidden = len(data["external"]) - len(rows)
-    row_h = 48
-    merge_h = 56
-    row_gap = 8
-    top = 30
-    repo_block = top + len(rows) * (row_h + row_gap) + (24 if hidden else 0)
-    merge_top = repo_block + (36 if merges else 0)
-    height = merge_top + len(merges) * (merge_h + row_gap)
+    clear_oss_assets(assets)
 
-    summary = "Pull requests to %d repositories I do not own, %d merged." % (
-        len(data["external"]), data["external_merged"])
-    out = svg_open(height, summary)
-    out += ('  <text x="0" y="18" font-family="%s" font-size="18" fill="%s">'
-            'Pull requests to repositories I do not own</text>\n' % (SANS, p["muted"]))
+    caption = "Pull requests to repositories I do not own"
+    more = "and %d more" % hidden
+    for theme, p in PALETTES.items():
+        write(os.path.join(assets, "oss-caption-%s.svg" % theme),
+              oss_caption_svg(caption, OSS_CAPTION_H, p))
+        for index, (repo, stat) in enumerate(rows):
+            write(os.path.join(assets, "oss-repo-%02d-%s.svg" % (index, theme)),
+                  oss_repo_svg(repo, stat, p))
+        if hidden:
+            write(os.path.join(assets, "oss-more-%s.svg" % theme),
+                  oss_caption_svg(more, OSS_MORE_H, p))
+        if merges:
+            write(os.path.join(assets, "oss-merges-caption-%s.svg" % theme),
+                  oss_caption_svg("Latest merges", OSS_MERGES_CAPTION_H, p, weight="600"))
+            for index, merge in enumerate(merges):
+                write(os.path.join(assets, "oss-merge-%02d-%s.svg" % (index, theme)),
+                      oss_merge_svg(merge, p))
 
-    y = top
-    for repo, stat in rows:
-        out += ('  <rect x="0" y="%d" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
-                % (y, WIDTH, row_h, p["panel"], p["border"]))
-        out += '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n' % (
-            y + row_h // 2, p["accent"] if stat["merged"] else p["muted"])
-        out += ('  <text x="40" y="%d" font-family="%s" font-size="22" fill="%s">%s</text>\n'
-                % (y + 31, SANS, p["text"], esc(repo)))
-
-        prs = "%d PR%s" % (stat["prs"], "" if stat["prs"] == 1 else "s")
-        out += ('  <text x="%d" y="%d" text-anchor="end" font-family="%s" font-size="20">'
-                % (WIDTH - 20, y + 31, SANS))
-        if stat["merged"]:
-            out += ('<tspan fill="%s">%d merged</tspan><tspan fill="%s"> &#183; %s</tspan>'
-                    % (p["accent"], stat["merged"], p["muted"], prs))
-        else:
-            out += '<tspan fill="%s">%s</tspan>' % (p["muted"], prs)
-        out += "</text>\n"
-        y += row_h + row_gap
-
-    if hidden:
-        out += ('  <text x="0" y="%d" font-family="%s" font-size="18" fill="%s">'
-                'and %d more</text>\n' % (y + 16, SANS, p["muted"], hidden))
-
-    if merges:
-        out += ('  <text x="0" y="%d" font-family="%s" font-size="18" font-weight="600" '
-                'letter-spacing="1.4" fill="%s">Latest merges</text>\n'
-                % (merge_top - 12, SANS, p["muted"]))
-        y = merge_top
-        for merge in merges:
-            label = "%s#%s" % (merge["repo"], merge["number"])
-            title = truncate(merge["title"], 72)
-            out += ('  <rect x="0" y="%d" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
-                    % (y, WIDTH, merge_h, p["panel"], p["border"]))
-            out += '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n' % (
-                y + merge_h // 2, p["accent"])
-            out += ('  <text x="40" y="%d" font-family="%s" font-size="18" fill="%s">%s</text>\n'
-                    % (y + 22, SANS, p["accent"], esc(label)))
-            out += ('  <text x="40" y="%d" font-family="%s" font-size="18" fill="%s">%s</text>\n'
-                    % (y + 44, SANS, p["text"], esc(title)))
-            y += merge_h + row_gap
-
-    out += "</svg>\n"
-    return out
+    patch_readme_oss(oss_readme_block(rows, hidden, merges))
 
 
 def render(data):
@@ -370,7 +478,7 @@ def render(data):
         os.path.dirname(os.path.abspath(__file__)), os.pardir, "assets")
     for theme, p in PALETTES.items():
         write(os.path.join(assets, "activity-%s.svg" % theme), activity_card(data, p))
-        write(os.path.join(assets, "oss-%s.svg" % theme), oss_card(data, p))
+    write_oss(data, assets)
 
     print("contributions=%s current_streak=%s external_repos=%s merged=%s" % (
         data["contributions"], data["current_streak"],
