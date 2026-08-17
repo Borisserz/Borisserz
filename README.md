@@ -54,10 +54,6 @@
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-light.svg">
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
-
-[OneBusAway/onebusaway-ios](https://github.com/OneBusAway/onebusaway-ios) · [iliyami/MacSai](https://github.com/iliyami/MacSai) · [chattymin/PokeTokenBar](https://github.com/chattymin/PokeTokenBar) · [greenjacketcoder/reveille](https://github.com/greenjacketcoder/reveille) · [inequitas/performancemonitor](https://github.com/inequitas/performancemonitor) · [moggerrescure/site](https://github.com/moggerrescure/site) · [CodeEditApp/CodeEdit](https://github.com/CodeEditApp/CodeEdit) · [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount) · [and 4 more](https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&type=pullrequests)
-
-Latest merges: [chattymin/PokeTokenBar#171](https://github.com/chattymin/PokeTokenBar/pull/171) · [chattymin/PokeTokenBar#160](https://github.com/chattymin/PokeTokenBar/pull/160) · [OneBusAway/onebusaway-ios#1262](https://github.com/OneBusAway/onebusaway-ios/pull/1262)
 <!-- oss:end -->
 
 <picture>

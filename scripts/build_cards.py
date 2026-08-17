@@ -381,18 +381,7 @@ def oss_readme_block(rows, hidden, merges):
         '  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">\n'
         "</picture>"
     )
-    repo_links = " · ".join(
-        "[%s](https://github.com/%s)" % (repo, repo) for repo, _ in rows)
-    if hidden:
-        repo_links += " · [and %d more](%s)" % (hidden, oss_search_url())
-    parts = [picture, "", repo_links]
-    if merges:
-        merge_links = " · ".join(
-            "[%s#%s](https://github.com/%s/pull/%s)"
-            % (merge["repo"], merge["number"], merge["repo"], merge["number"])
-            for merge in merges)
-        parts.extend(["", "Latest merges: " + merge_links])
-    return "\n".join(parts)
+    return picture
 
 
 def clear_stale_oss_rows(assets):
