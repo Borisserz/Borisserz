@@ -50,99 +50,14 @@
 
 <!-- oss:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-caption-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-caption-light.svg?v=202608171306">
-  <img src="assets/oss-caption-dark.svg?v=202608171306" width="100%" alt="Pull requests to repositories I do not own">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">
+  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
-<a href="https://github.com/OneBusAway/onebusaway-ios">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-00-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-00-light.svg?v=202608171306">
-  <img src="assets/oss-repo-00-dark.svg?v=202608171306" width="100%" alt="OneBusAway/onebusaway-ios">
-</picture>
-</a>
-<a href="https://github.com/iliyami/MacSai">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-01-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-01-light.svg?v=202608171306">
-  <img src="assets/oss-repo-01-dark.svg?v=202608171306" width="100%" alt="iliyami/MacSai">
-</picture>
-</a>
-<a href="https://github.com/chattymin/PokeTokenBar">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-02-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-02-light.svg?v=202608171306">
-  <img src="assets/oss-repo-02-dark.svg?v=202608171306" width="100%" alt="chattymin/PokeTokenBar">
-</picture>
-</a>
-<a href="https://github.com/greenjacketcoder/reveille">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-03-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-03-light.svg?v=202608171306">
-  <img src="assets/oss-repo-03-dark.svg?v=202608171306" width="100%" alt="greenjacketcoder/reveille">
-</picture>
-</a>
-<a href="https://github.com/inequitas/performancemonitor">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-04-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-04-light.svg?v=202608171306">
-  <img src="assets/oss-repo-04-dark.svg?v=202608171306" width="100%" alt="inequitas/performancemonitor">
-</picture>
-</a>
-<a href="https://github.com/moggerrescure/site">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-05-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-05-light.svg?v=202608171306">
-  <img src="assets/oss-repo-05-dark.svg?v=202608171306" width="100%" alt="moggerrescure/site">
-</picture>
-</a>
-<a href="https://github.com/CodeEditApp/CodeEdit">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-06-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-06-light.svg?v=202608171306">
-  <img src="assets/oss-repo-06-dark.svg?v=202608171306" width="100%" alt="CodeEditApp/CodeEdit">
-</picture>
-</a>
-<a href="https://github.com/StanfordSpezi/SpeziAccount">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-repo-07-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-repo-07-light.svg?v=202608171306">
-  <img src="assets/oss-repo-07-dark.svg?v=202608171306" width="100%" alt="StanfordSpezi/SpeziAccount">
-</picture>
-</a>
-<a href="https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&amp;type=pullrequests">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-more-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-more-light.svg?v=202608171306">
-  <img src="assets/oss-more-dark.svg?v=202608171306" width="100%" alt="and 4 more">
-</picture>
-</a>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-merges-caption-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-merges-caption-light.svg?v=202608171306">
-  <img src="assets/oss-merges-caption-dark.svg?v=202608171306" width="100%" alt="Latest merges">
-</picture>
-<a href="https://github.com/chattymin/PokeTokenBar/pull/171">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-merge-00-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-merge-00-light.svg?v=202608171306">
-  <img src="assets/oss-merge-00-dark.svg?v=202608171306" width="100%" alt="chattymin/PokeTokenBar#171">
-</picture>
-</a>
-<a href="https://github.com/chattymin/PokeTokenBar/pull/160">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-merge-01-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-merge-01-light.svg?v=202608171306">
-  <img src="assets/oss-merge-01-dark.svg?v=202608171306" width="100%" alt="chattymin/PokeTokenBar#160">
-</picture>
-</a>
-<a href="https://github.com/OneBusAway/onebusaway-ios/pull/1262">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-merge-02-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-merge-02-light.svg?v=202608171306">
-  <img src="assets/oss-merge-02-dark.svg?v=202608171306" width="100%" alt="OneBusAway/onebusaway-ios#1262">
-</picture>
-</a>
+
+[OneBusAway/onebusaway-ios](https://github.com/OneBusAway/onebusaway-ios) · [iliyami/MacSai](https://github.com/iliyami/MacSai) · [chattymin/PokeTokenBar](https://github.com/chattymin/PokeTokenBar) · [greenjacketcoder/reveille](https://github.com/greenjacketcoder/reveille) · [inequitas/performancemonitor](https://github.com/inequitas/performancemonitor) · [moggerrescure/site](https://github.com/moggerrescure/site) · [CodeEditApp/CodeEdit](https://github.com/CodeEditApp/CodeEdit) · [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount) · [and 4 more](https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&type=pullrequests)
+
+Latest merges: [chattymin/PokeTokenBar#171](https://github.com/chattymin/PokeTokenBar/pull/171) · [chattymin/PokeTokenBar#160](https://github.com/chattymin/PokeTokenBar/pull/160) · [OneBusAway/onebusaway-ios#1262](https://github.com/OneBusAway/onebusaway-ios/pull/1262)
 <!-- oss:end -->
 
 <picture>

@@ -65,7 +65,7 @@ jobs:
           path = pathlib.Path("README.md")
           text = path.read_text()
           text2 = re.sub(
-              r"(assets/(?:activity-[^?\s\"']+|oss-[^?\s\"']+)\.svg)(?:\?v=\d+)?",
+              r"(assets/(?:activity|oss)-(?:dark|light)\.svg)(?:\?v=\d+)?",
               rf"\1?v={stamp}",
               text,
           )
