@@ -376,9 +376,9 @@ def oss_search_url():
 def oss_readme_block(rows, hidden, merges):
     picture = (
         "<picture>\n"
-        '  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">\n'
-        '  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">\n'
-        '  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">\n'
+        '  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg">\n'
+        '  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-light.svg">\n'
+        '  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">\n'
         "</picture>"
     )
     repo_links = " · ".join(

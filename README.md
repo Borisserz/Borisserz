@@ -1,27 +1,27 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-  <img src="assets/hero-dark.svg" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
 </picture>
 
 **Native iOS developer**, third-year CS student at BSUIR in Minsk. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/status-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/status-light.svg">
-  <img src="assets/status-dark.svg" width="100%" alt="Minsk, BY. Third-year CS at BSUIR. Open to iOS internships.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg" width="100%" alt="Minsk, BY. Third-year CS at BSUIR. Open to iOS internships.">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-activity-light.svg">
-  <img src="assets/sec-activity-dark.svg" width="100%" alt="Activity">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-activity-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-activity-dark.svg" width="100%" alt="Activity">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-  <img src="assets/activity-dark.svg" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
 </picture>
 
 <picture>
@@ -31,9 +31,9 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-apps-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-apps-light.svg">
-  <img src="assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
 </picture>
 
 - **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** ([App Store](https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106)) — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
@@ -43,16 +43,16 @@
 - **[FitRPG](https://github.com/Borisserz/rpg-fitness)** ([App Store](https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478)) — fitness RPG: on-device camera rep tracking powers Arena PvP, clans, raids and quest islands. SwiftUI, HealthKit, Firebase. Free, no IAP.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-open-source-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-open-source-light.svg">
-  <img src="assets/sec-open-source-dark.svg" width="100%" alt="Open source">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-open-source-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-open-source-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-open-source-dark.svg" width="100%" alt="Open source">
 </picture>
 
 <!-- oss:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">
-  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
 
 [OneBusAway/onebusaway-ios](https://github.com/OneBusAway/onebusaway-ios) · [iliyami/MacSai](https://github.com/iliyami/MacSai) · [chattymin/PokeTokenBar](https://github.com/chattymin/PokeTokenBar) · [greenjacketcoder/reveille](https://github.com/greenjacketcoder/reveille) · [inequitas/performancemonitor](https://github.com/inequitas/performancemonitor) · [moggerrescure/site](https://github.com/moggerrescure/site) · [CodeEditApp/CodeEdit](https://github.com/CodeEditApp/CodeEdit) · [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount) · [and 4 more](https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&type=pullrequests)
@@ -61,26 +61,26 @@ Latest merges: [chattymin/PokeTokenBar#171](https://github.com/chattymin/PokeTok
 <!-- oss:end -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-stack-light.svg">
-  <img src="assets/sec-stack-dark.svg" width="100%" alt="Stack">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-stack-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-stack-dark.svg" width="100%" alt="Stack">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/stack-light.svg">
-  <img src="assets/stack-dark.svg" width="100%" alt="iOS, patterns, backend, data and AI, web and tooling stack.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/stack-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/stack-dark.svg" width="100%" alt="iOS, patterns, backend, data and AI, web and tooling stack.">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sec-contact-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/sec-contact-light.svg">
-  <img src="assets/sec-contact-dark.svg" width="100%" alt="Contact">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-contact-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-contact-dark.svg" width="100%" alt="Contact">
 </picture>
 
-[![Telegram](assets/badge-telegram-dark.svg)](https://t.me/borisserz)
-[![LinkedIn](assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
-[![App Store](assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
+[![Telegram](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-telegram-dark.svg)](https://t.me/borisserz)
+[![LinkedIn](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
+[![App Store](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Borisserz&style=flat-square&color=F05138&label=Profile+views" alt="Profile views">
