@@ -5,8 +5,7 @@ name: Snake
 
 on:
   schedule:
-    # Align with Cards cadence so the snake does not lag a full day behind.
-    - cron: "45 */6 * * *"
+    - cron: "45 4 * * *"
   workflow_dispatch:
 
 permissions:

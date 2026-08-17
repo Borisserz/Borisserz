@@ -19,15 +19,15 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=202608171426">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=202608171426">
-  <img src="assets/activity-dark.svg?v=202608171426" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
+  <img src="assets/activity-dark.svg" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-light.svg">
-  <img src="https://raw.githubusercontent.com/Borisserz/Borisserz/output/github-snake-dark.svg" width="100%" alt="A snake eating its way through the contribution calendar.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@output/github-snake-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@output/github-snake-dark.svg" width="100%" alt="A snake eating its way through the contribution calendar.">
 </picture>
 
 <picture>
@@ -50,9 +50,9 @@
 
 <!-- oss:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg?v=202608171426">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg?v=202608171426">
-  <img src="assets/oss-dark.svg?v=202608171426" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">
+  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
 
 [OneBusAway/onebusaway-ios](https://github.com/OneBusAway/onebusaway-ios) · [iliyami/MacSai](https://github.com/iliyami/MacSai) · [chattymin/PokeTokenBar](https://github.com/chattymin/PokeTokenBar) · [greenjacketcoder/reveille](https://github.com/greenjacketcoder/reveille) · [inequitas/performancemonitor](https://github.com/inequitas/performancemonitor) · [moggerrescure/site](https://github.com/moggerrescure/site) · [CodeEditApp/CodeEdit](https://github.com/CodeEditApp/CodeEdit) · [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount) · [and 4 more](https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&type=pullrequests)
@@ -86,4 +86,4 @@ Latest merges: [chattymin/PokeTokenBar#171](https://github.com/chattymin/PokeTok
   <img src="https://komarev.com/ghpvc/?username=Borisserz&style=flat-square&color=F05138&label=Profile+views" alt="Profile views">
 </p>
 
-<sub>The activity and open-source cards above are regenerated every few hours by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>
+<sub>The activity and open-source cards above are regenerated daily by a GitHub Action straight from the GitHub API, so nothing on this page depends on a third-party badge service staying online.</sub>
