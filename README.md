@@ -19,9 +19,9 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=202608171306">
-  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=202608171306">
-  <img src="assets/activity-dark.svg?v=202608171306" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg?v=202608171426">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg?v=202608171426">
+  <img src="assets/activity-dark.svg?v=202608171426" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
 </picture>
 
 <picture>
@@ -50,9 +50,9 @@
 
 <!-- oss:start -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg">
-  <img src="assets/oss-dark.svg" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/oss-dark.svg?v=202608171426">
+  <source media="(prefers-color-scheme: light)" srcset="assets/oss-light.svg?v=202608171426">
+  <img src="assets/oss-dark.svg?v=202608171426" width="100%" alt="Pull requests to repositories I do not own, with merge counts and latest merged titles.">
 </picture>
 
 [OneBusAway/onebusaway-ios](https://github.com/OneBusAway/onebusaway-ios) · [iliyami/MacSai](https://github.com/iliyami/MacSai) · [chattymin/PokeTokenBar](https://github.com/chattymin/PokeTokenBar) · [greenjacketcoder/reveille](https://github.com/greenjacketcoder/reveille) · [inequitas/performancemonitor](https://github.com/inequitas/performancemonitor) · [moggerrescure/site](https://github.com/moggerrescure/site) · [CodeEditApp/CodeEdit](https://github.com/CodeEditApp/CodeEdit) · [StanfordSpezi/SpeziAccount](https://github.com/StanfordSpezi/SpeziAccount) · [and 4 more](https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&type=pullrequests)
