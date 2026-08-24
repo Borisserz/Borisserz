@@ -122,25 +122,25 @@
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merges-caption-light.svg">
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merges-caption-dark.svg" width="100%" alt="Latest merges">
 </picture>
-<a href="https://github.com/chattymin/PokeTokenBar">
+<a href="https://github.com/OneBusAway/onebusaway-ios">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg" width="100%" alt="chattymin/PokeTokenBar#187">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1294">
 </picture>
 </a>
 <a href="https://github.com/OneBusAway/onebusaway-ios">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1301">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1305">
 </picture>
 </a>
-<a href="https://github.com/OneBusAway/onebusaway-ios">
+<a href="https://github.com/chattymin/PokeTokenBar">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1267">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg" width="100%" alt="chattymin/PokeTokenBar#187">
 </picture>
 </a>
 <!-- oss:end -->
