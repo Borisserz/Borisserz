@@ -41,7 +41,6 @@ SECTIONS = {
     "apps": "Shipped apps",
     "open-source": "Open source",
     "activity": "Activity",
-    "feed": "Now",
     "stack": "Stack",
     "contact": "Contact",
 }

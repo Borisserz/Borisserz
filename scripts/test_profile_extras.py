@@ -3,10 +3,13 @@
 
 import os
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_cards import (  # noqa: E402
+    APPS,
+    app_readme_block,
     apply_fetched_title,
     contrib_level,
     patch_markers,
@@ -109,6 +112,17 @@ class PatchMarkersTests(unittest.TestCase):
         self.assertIn("<!-- feed:start -->\nnew\n<!-- feed:end -->", out)
         self.assertTrue(out.startswith("before"))
         self.assertIn("after", out)
+
+
+class AppReadmeBlockTests(unittest.TestCase):
+    def test_omits_screenshots_even_when_jpgs_exist(self):
+        tmp = tempfile.mkdtemp()
+        for app in APPS:
+            with open(os.path.join(tmp, "app-%s.jpg" % app["slug"]), "w") as fh:
+                fh.write("x")
+        block = app_readme_block(tmp)
+        self.assertNotIn(".jpg", block)
+        self.assertIn("app-workouttracker", block)
 
 
 if __name__ == "__main__":

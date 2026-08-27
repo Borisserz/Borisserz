@@ -216,7 +216,6 @@ def collect():
     if not user:
         sys.exit("no such user: %s" % LOGIN)
     data = parse(user, search_prs("is:pr author:%s -user:%s" % (LOGIN, LOGIN)))
-    data["feed"] = recent_feed()
     return data
 
 
@@ -430,7 +429,7 @@ OSS_MARK_END = "<!-- oss:end -->"
 OSS_CDN = "https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets"
 ACTIVITY_URL_RE = re.compile(
     r"(https://cdn\.jsdelivr\.net/gh/Borisserz/Borisserz@main/assets/"
-    r"(?:activity|iso|habits|feed-\d+|app-[a-z0-9]+)-(?:dark|light)\.svg)"
+    r"(?:activity|app-[a-z0-9]+)-(?:dark|light)\.svg)"
     r"(?:\?v=[^\"\s>]*)?"
 )
 OSS_ROW_H = 48
@@ -767,18 +766,6 @@ def app_readme_block(assets):
     for app in APPS:
         href = app["store"] or app["github"]
         parts.append(md_picture("app-%s" % app["slug"], app["name"], href))
-    shots = []
-    for app in APPS:
-        jpg = os.path.join(assets, "app-%s.jpg" % app["slug"])
-        if not os.path.exists(jpg):
-            continue
-        href = app["store"] or app["github"]
-        src = "%s/app-%s.jpg" % (OSS_CDN, app["slug"])
-        shots.append(
-            '<a href="%s"><img src="%s" width="180" alt="%s screenshot"></a>'
-            % (esc(href), src, esc(app["name"])))
-    if shots:
-        parts.append("<p>\n%s\n</p>" % "\n".join(shots))
     return "\n".join(parts)
 
 
@@ -808,16 +795,14 @@ def render(data):
         os.path.dirname(os.path.abspath(__file__)), os.pardir, "assets")
     for theme, p in PALETTES.items():
         write(os.path.join(assets, "activity-%s.svg" % theme), activity_card(data, p))
-    write_viz(data, assets)
     write_oss(data, assets)
-    write_feed(data, assets)
     write_apps(assets)
     patch_readme_activity_bust(
         datetime.now(timezone.utc).strftime("%Y%m%d%H%M"))
 
-    print("contributions=%s current_streak=%s external_repos=%s merged=%s feed=%s" % (
+    print("contributions=%s current_streak=%s external_repos=%s merged=%s" % (
         data["contributions"], data["current_streak"],
-        len(data["external"]), data["external_merged"], len(data.get("feed") or [])))
+        len(data["external"]), data["external_merged"]))
 
 
 def main():
