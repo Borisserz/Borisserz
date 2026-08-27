@@ -19,9 +19,21 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202608271513">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-light.svg?v=202608271513">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202608271513" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202608271722" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/iso-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/iso-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/iso-dark.svg?v=202608271722" width="100%" alt="Isometric contribution calendar for the last 12 months.">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/habits-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/habits-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/habits-dark.svg?v=202608271722" width="100%" alt="Commits by weekday.">
 </picture>
 
 <picture>
@@ -31,16 +43,97 @@
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-feed-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-feed-light.svg">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-feed-dark.svg" width="100%" alt="Now">
+</picture>
+
+<!-- feed:start -->
+<a href="https://github.com/OneBusAway/onebusaway-ios/pull/1322">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-00-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-00-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-00-dark.svg?v=202608271722" width="100%" alt="opened OneBusAway/onebusaway-ios #1322">
+</picture>
+</a>
+<a href="https://github.com/OneBusAway/onebusaway-ios/pull/1321">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-01-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-01-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-01-dark.svg?v=202608271722" width="100%" alt="opened OneBusAway/onebusaway-ios #1321">
+</picture>
+</a>
+<a href="https://github.com/OneBusAway/onebusaway-ios/pull/1320">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-02-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-02-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-02-dark.svg?v=202608271722" width="100%" alt="opened OneBusAway/onebusaway-ios #1320">
+</picture>
+</a>
+<a href="https://github.com/iliyami/MacSai/pull/139">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-03-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-03-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-03-dark.svg?v=202608271722" width="100%" alt="opened iliyami/MacSai #139">
+</picture>
+</a>
+<a href="https://github.com/chattymin/PokeTokenBar/pull/228">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-04-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-04-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/feed-04-dark.svg?v=202608271722" width="100%" alt="opened chattymin/PokeTokenBar #228">
+</picture>
+</a>
+<!-- feed:end -->
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-light.svg">
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-apps-dark.svg" width="100%" alt="Shipped apps">
 </picture>
 
-- **[WorkoutTracker](https://github.com/Borisserz/WorkoutTracker)** ([App Store](https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106)) — training tracker with on-device form analysis via Vision and Core ML, Live Activities, home-screen widgets, a watchOS companion, and a Vertex AI coach behind Firebase App Check.
-- **[FoodTracker](https://github.com/Borisserz/FoodTracker)** ([App Store](https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345)) — nutrition app built on multimodal Gemini 2.5 Flash, computer vision and HealthKit. Shares an App Group with WorkoutTracker, so training load adjusts the day's macro targets.
-- **[Yoga](https://github.com/Borisserz/Yoga)** — yoga companion with real-time pose tracking on `VNHumanBodyPoseObservation`, per-pose joint-angle analysis, spoken feedback and a Firestore leaderboard.
-- **[Stepper](https://github.com/Borisserz/Stepper)** — pedometer and route tracker on MapKit and Core Location. Work in progress, UI-first.
-- **[FitRPG](https://github.com/Borisserz/rpg-fitness)** ([App Store](https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478)) — fitness RPG: on-device camera rep tracking powers Arena PvP, clans, raids and quest islands. SwiftUI, HealthKit, Firebase. Free, no IAP.
+<!-- apps:start -->
+<a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202608271722" width="100%" alt="WorkoutTracker">
+</picture>
+</a>
+<a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202608271722" width="100%" alt="FoodTracker">
+</picture>
+</a>
+<a href="https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202608271722" width="100%" alt="FitRPG">
+</picture>
+</a>
+<a href="https://github.com/Borisserz/Yoga">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202608271722" width="100%" alt="Yoga">
+</picture>
+</a>
+<a href="https://github.com/Borisserz/Stepper">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202608271722">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-light.svg?v=202608271722">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202608271722" width="100%" alt="Stepper">
+</picture>
+</a>
+<p>
+<a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106"><img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker.jpg" width="180" alt="WorkoutTracker screenshot"></a>
+<a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345"><img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker.jpg" width="180" alt="FoodTracker screenshot"></a>
+<a href="https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478"><img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg.jpg" width="180" alt="FitRPG screenshot"></a>
+</p>
+<!-- apps:end -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-open-source-dark.svg">

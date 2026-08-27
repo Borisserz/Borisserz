@@ -24,6 +24,7 @@ from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_static import (  # noqa: E402
+    APPS,
     CHIP_FONT,
     CHIP_GAP,
     CHIP_H,
@@ -206,6 +207,7 @@ def parse(user, pr_items):
         "external": rows,
         "external_merged": sum(v["merged"] for _, v in rows),
         "latest_merges": merges[:3],
+        "weeks": calendar["weeks"],
     }
 
 
@@ -213,7 +215,31 @@ def collect():
     user = graphql(USER_QUERY, {"login": LOGIN})["user"]
     if not user:
         sys.exit("no such user: %s" % LOGIN)
-    return parse(user, search_prs("is:pr author:%s -user:%s" % (LOGIN, LOGIN)))
+    data = parse(user, search_prs("is:pr author:%s -user:%s" % (LOGIN, LOGIN)))
+    data["feed"] = recent_feed()
+    return data
+
+
+def recent_feed():
+    events = request("%s/users/%s/events/public?per_page=40" % (API, LOGIN))
+    rows = []
+    seen = set()
+    for event in events:
+        row = summarize_event(event)
+        if not row:
+            continue
+        key = (row["verb"], row["href"])
+        if key in seen:
+            continue
+        seen.add(key)
+        if not row.get("detail"):
+            url = event_resource_url(event)
+            if url:
+                row = apply_fetched_title(row, request(url))
+        rows.append(row)
+        if len(rows) >= 5:
+            break
+    return rows
 
 
 def svg_open(height, label):
@@ -300,12 +326,112 @@ def truncate(text, max_chars):
     return text[: max_chars - 1].rstrip(" .,;:-") + "..."
 
 
+def apply_fetched_title(row, fetched):
+    """GitHub's Events API omits PR titles. Fill them from a follow-up fetch."""
+    if row.get("detail"):
+        return row
+    filled = dict(row)
+    filled["detail"] = truncate((fetched or {}).get("title") or "", 64)
+    return filled
+
+
+def event_resource_url(event):
+    payload = event.get("payload") or {}
+    kind = event.get("type")
+    if kind in ("PullRequestEvent", "PullRequestReviewEvent"):
+        return (payload.get("pull_request") or {}).get("url")
+    if kind == "IssuesEvent":
+        return (payload.get("issue") or {}).get("url")
+    return None
+
+
+def contrib_level(count, max_count):
+    if count <= 0 or max_count <= 0:
+        return 0
+    return max(1, min(4, int(round(4.0 * count / max_count))))
+
+
+def weekday_counts(weeks):
+    """Sunday-first totals, matching GitHub's contribution grid."""
+    counts = [0] * 7
+    for week in weeks:
+        for day in week["contributionDays"]:
+            parsed = date.fromisoformat(day["date"])
+            idx = (parsed.weekday() + 1) % 7
+            counts[idx] += day["contributionCount"]
+    return counts
+
+
+def summarize_event(event):
+    """Turns a GitHub Events API payload into a feed row, or None if noisy."""
+    kind = event.get("type")
+    repo = (event.get("repo") or {}).get("name") or ""
+    payload = event.get("payload") or {}
+    if kind == "PullRequestEvent":
+        pr = payload.get("pull_request") or {}
+        number = pr.get("number") or payload.get("number")
+        href = pr.get("html_url") or ("https://github.com/%s/pull/%s" % (repo, number))
+        if payload.get("action") == "closed" and pr.get("merged"):
+            verb = "merged"
+        elif payload.get("action") == "opened":
+            verb = "opened"
+        else:
+            return None
+        return {
+            "verb": verb,
+            "repo": repo,
+            "href": href,
+            "label": "%s #%s" % (repo, number),
+            "detail": truncate(pr.get("title") or "", 64),
+        }
+    if kind == "IssuesEvent" and payload.get("action") == "opened":
+        issue = payload.get("issue") or {}
+        number = issue.get("number")
+        href = issue.get("html_url") or ""
+        return {
+            "verb": "opened",
+            "repo": repo,
+            "href": href,
+            "label": "%s #%s" % (repo, number),
+            "detail": truncate(issue.get("title") or "", 64),
+        }
+    if kind == "ReleaseEvent":
+        rel = payload.get("release") or {}
+        return {
+            "verb": "released",
+            "repo": repo,
+            "href": rel.get("html_url") or ("https://github.com/%s" % repo),
+            "label": repo,
+            "detail": rel.get("tag_name") or "release",
+        }
+    if kind == "PullRequestReviewEvent":
+        pr = payload.get("pull_request") or {}
+        number = pr.get("number")
+        href = pr.get("html_url") or ""
+        return {
+            "verb": "reviewed",
+            "repo": repo,
+            "href": href,
+            "label": "%s #%s" % (repo, number),
+            "detail": truncate(pr.get("title") or "", 64),
+        }
+    return None
+
+
+def patch_markers(text, start, end, block):
+    wrapped = "%s\n%s\n%s" % (start, block.rstrip(), end)
+    pre, rest = text.split(start, 1)
+    _, post = rest.split(end, 1)
+    return pre + wrapped + post
+
+
 OSS_MARK_START = "<!-- oss:start -->"
 OSS_MARK_END = "<!-- oss:end -->"
 OSS_CDN = "https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets"
 ACTIVITY_URL_RE = re.compile(
     r"(https://cdn\.jsdelivr\.net/gh/Borisserz/Borisserz@main/assets/"
-    r"activity-(?:dark|light)\.svg)(?:\?v=[^\"\s>]*)?"
+    r"(?:activity|iso|habits|feed-\d+|app-[a-z0-9]+)-(?:dark|light)\.svg)"
+    r"(?:\?v=[^\"\s>]*)?"
 )
 OSS_ROW_H = 48
 OSS_MERGE_H = 56
@@ -437,15 +563,163 @@ def patch_readme_oss(block):
     readme = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), os.pardir, "README.md")
     text = open(readme, encoding="utf-8").read()
-    wrapped = "%s\n%s\n%s" % (OSS_MARK_START, block.rstrip(), OSS_MARK_END)
-    if OSS_MARK_START in text and OSS_MARK_END in text:
-        pre, rest = text.split(OSS_MARK_START, 1)
-        _, post = rest.split(OSS_MARK_END, 1)
-        text = pre + wrapped + post
-    else:
-        sys.exit("could not find OSS markers in README.md")
+    text = patch_markers(text, OSS_MARK_START, OSS_MARK_END, block)
     open(readme, "w", encoding="utf-8").write(text)
     print("wrote README.md OSS links")
+
+
+def patch_readme_section(start, end, block):
+    readme = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), os.pardir, "README.md")
+    text = open(readme, encoding="utf-8").read()
+    if start not in text or end not in text:
+        sys.exit("could not find markers %s %s in README.md" % (start, end))
+    open(readme, "w", encoding="utf-8").write(patch_markers(text, start, end, block))
+    print("wrote README.md %s" % start)
+
+
+ISO_SHADES = {
+    "dark": {
+        0: ("#3B3B41", "#2C2C31", "#26262B"),
+        1: ("#8F4A40", "#6B3830", "#542C26"),
+        2: ("#C45A48", "#A0483A", "#7A372C"),
+        3: ("#E86850", "#D0503C", "#A03C2E"),
+        4: ("#FF7A62", "#F05138", "#C03E2C"),
+    },
+    "light": {
+        0: ("#D8D8DC", "#E8E8EC", "#D0D0D4"),
+        1: ("#F7C8C0", "#E8A090", "#D48878"),
+        2: ("#F49A88", "#E87868", "#D06050"),
+        3: ("#F56C58", "#F05138", "#D04430"),
+        4: ("#FF5A42", "#F05138", "#C03E2C"),
+    },
+}
+
+WEEKDAYS = ("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+
+
+def iso_cube(x, y, dx, dy, h, top, left, right):
+    hw = dx / 2.0
+    hh = dy / 2.0
+    top_pts = "%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" % (
+        x, y - h,
+        x + hw, y + hh - h,
+        x, y + dy - h,
+        x - hw, y + hh - h,
+    )
+    left_pts = "%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" % (
+        x - hw, y + hh - h,
+        x, y + dy - h,
+        x, y + dy,
+        x - hw, y + hh,
+    )
+    right_pts = "%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" % (
+        x + hw, y + hh - h,
+        x, y + dy - h,
+        x, y + dy,
+        x + hw, y + hh,
+    )
+    return (
+        '  <polygon points="%s" fill="%s"/>\n'
+        '  <polygon points="%s" fill="%s"/>\n'
+        '  <polygon points="%s" fill="%s"/>\n'
+        % (top_pts, top, left_pts, left, right_pts, right)
+    )
+
+
+def iso_card(weeks, p, theme):
+    grid = []
+    for week in weeks[-52:]:
+        col = [day["contributionCount"] for day in week["contributionDays"]]
+        while len(col) < 7:
+            col.append(0)
+        grid.append(col[:7])
+    if not grid:
+        grid = [[0] * 7]
+    max_c = max(c for col in grid for c in col) or 1
+    dx, dy = 18, 14
+    ox, oy = 52, 18
+    max_h = 28
+    cols = len(grid)
+    height = int(oy + 7 * dy + max_h + 18)
+    out = svg_open(height, "Isometric contribution calendar for the last 12 months.")
+    shades = ISO_SHADES[theme]
+    for d, name in enumerate(WEEKDAYS):
+        out += ('  <text x="0" y="%d" font-family="%s" font-size="12" fill="%s">%s</text>\n'
+                % (int(oy + max_h + d * dy + 6), SANS, p["muted"], name))
+    for w in range(cols - 1, -1, -1):
+        for d in range(6, -1, -1):
+            level = contrib_level(grid[w][d], max_c)
+            h = 2 + level * 5
+            x = ox + w * dx + d * (dx * 0.42)
+            y = oy + max_h + d * dy
+            top, left, right = shades[level]
+            out += iso_cube(x, y, dx, dy, h, top, left, right)
+    out += "</svg>\n"
+    return out
+
+
+def habits_card(weeks, p):
+    counts = weekday_counts(weeks)
+    peak = max(counts) or 1
+    busiest = WEEKDAYS[counts.index(peak)]
+    gap = 21
+    col_w = (WIDTH - 6 * gap) // 7
+    bar_max = 86
+    height = 168
+    out = svg_open(
+        height,
+        "Commits by weekday. Busiest day is %s." % busiest)
+    out += ('  <text x="0" y="22" font-family="%s" font-size="18" font-weight="600" '
+            'letter-spacing="1.4" fill="%s">When I ship</text>\n' % (SANS, p["muted"]))
+    for i, name in enumerate(WEEKDAYS):
+        x = i * (col_w + gap)
+        h = int(round(bar_max * counts[i] / peak)) if peak else 0
+        y = 36 + (bar_max - h)
+        fill = p["accent"] if counts[i] == peak else p["panel"]
+        stroke = p["accent"] if counts[i] == peak else p["border"]
+        out += ('  <rect x="%d" y="%d" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
+                % (x, y, col_w, max(h, 8), fill, stroke))
+        out += ('  <text x="%d" y="150" text-anchor="middle" font-family="%s" '
+                'font-size="16" fill="%s">%s</text>\n'
+                % (x + col_w // 2, SANS, p["muted"], name))
+    out += "</svg>\n"
+    return out
+
+
+def feed_row_svg(row, p):
+    height = OSS_MERGE_H + OSS_ROW_GAP
+    body = (
+        '  <rect x="0" y="0" width="%d" height="%d" rx="10" fill="%s" stroke="%s"/>\n'
+        '  <circle cx="20" cy="%d" r="4" fill="%s"/>\n'
+        '  <text x="40" y="22" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+        '  <text x="40" y="44" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+        % (WIDTH, OSS_MERGE_H, p["panel"], p["border"],
+           OSS_MERGE_H // 2, p["accent"],
+           SANS, p["accent"], esc(row["verb"]),
+           SANS, p["text"], esc(row["detail"] or row["label"]))
+    )
+    return svg_doc(height, "%s %s" % (row["verb"], row["label"]), body)
+
+
+def app_card_svg(app, p):
+    height = 88
+    badge = "App Store" if app["store"] else "WIP"
+    body = (
+        '  <rect x="0" y="0" width="%d" height="80" rx="14" fill="%s" stroke="%s"/>\n'
+        '  <circle cx="24" cy="40" r="5" fill="%s"/>\n'
+        '  <text x="46" y="30" font-family="%s" font-size="24" font-weight="600" fill="%s">%s</text>\n'
+        '  <text x="46" y="52" font-family="%s" font-size="16" fill="%s">%s</text>\n'
+        '  <text x="46" y="70" font-family="%s" font-size="16" fill="%s">%s</text>\n'
+        '  <text x="%d" y="44" text-anchor="end" font-family="%s" font-size="18" fill="%s">%s</text>\n'
+        % (WIDTH, p["panel"], p["border"],
+           p["accent"],
+           SANS, p["text"], esc(app["name"]),
+           SANS, p["muted"], esc(app["chips"]),
+           SANS, p["text"], esc(app["blurb"]),
+           WIDTH - 24, SANS, p["accent"], badge)
+    )
+    return svg_doc(height, app["name"], body)
 
 
 def write_oss(data, assets):
@@ -472,6 +746,60 @@ def write_oss(data, assets):
     patch_readme_oss(oss_readme_block(rows, hidden, merges))
 
 
+def write_feed(data, assets):
+    rows = data.get("feed") or []
+    for theme, p in PALETTES.items():
+        for index, row in enumerate(rows):
+            write(os.path.join(assets, "feed-%02d-%s.svg" % (index, theme)),
+                  feed_row_svg(row, p))
+    parts = []
+    for index, row in enumerate(rows):
+        parts.append(md_picture(
+            "feed-%02d" % index,
+            "%s %s" % (row["verb"], row["label"]),
+            row["href"]))
+    block = "\n".join(parts) if parts else "_No public events yet._"
+    patch_readme_section("<!-- feed:start -->", "<!-- feed:end -->", block)
+
+
+def app_readme_block(assets):
+    parts = []
+    for app in APPS:
+        href = app["store"] or app["github"]
+        parts.append(md_picture("app-%s" % app["slug"], app["name"], href))
+    shots = []
+    for app in APPS:
+        jpg = os.path.join(assets, "app-%s.jpg" % app["slug"])
+        if not os.path.exists(jpg):
+            continue
+        href = app["store"] or app["github"]
+        src = "%s/app-%s.jpg" % (OSS_CDN, app["slug"])
+        shots.append(
+            '<a href="%s"><img src="%s" width="180" alt="%s screenshot"></a>'
+            % (esc(href), src, esc(app["name"])))
+    if shots:
+        parts.append("<p>\n%s\n</p>" % "\n".join(shots))
+    return "\n".join(parts)
+
+
+def write_apps(assets):
+    for theme, p in PALETTES.items():
+        for app in APPS:
+            write(os.path.join(assets, "app-%s-%s.svg" % (app["slug"], theme)),
+                  app_card_svg(app, p))
+    patch_readme_section("<!-- apps:start -->", "<!-- apps:end -->",
+                         app_readme_block(assets))
+
+
+def write_viz(data, assets):
+    weeks = data["weeks"]
+    for theme, p in PALETTES.items():
+        write(os.path.join(assets, "iso-%s.svg" % theme),
+              iso_card(weeks, p, theme))
+        write(os.path.join(assets, "habits-%s.svg" % theme),
+              habits_card(weeks, p))
+
+
 def render(data):
     if not data["languages"]:
         sys.exit("no language data returned; refusing to write empty cards")
@@ -480,13 +808,16 @@ def render(data):
         os.path.dirname(os.path.abspath(__file__)), os.pardir, "assets")
     for theme, p in PALETTES.items():
         write(os.path.join(assets, "activity-%s.svg" % theme), activity_card(data, p))
+    write_viz(data, assets)
     write_oss(data, assets)
+    write_feed(data, assets)
+    write_apps(assets)
     patch_readme_activity_bust(
         datetime.now(timezone.utc).strftime("%Y%m%d%H%M"))
 
-    print("contributions=%s current_streak=%s external_repos=%s merged=%s" % (
+    print("contributions=%s current_streak=%s external_repos=%s merged=%s feed=%s" % (
         data["contributions"], data["current_streak"],
-        len(data["external"]), data["external_merged"]))
+        len(data["external"]), data["external_merged"], len(data.get("feed") or [])))
 
 
 def main():

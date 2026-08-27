@@ -41,9 +41,54 @@ SECTIONS = {
     "apps": "Shipped apps",
     "open-source": "Open source",
     "activity": "Activity",
+    "feed": "Now",
     "stack": "Stack",
     "contact": "Contact",
 }
+
+# Product rows on the profile. Store IDs are App Store numeric ids.
+APPS = [
+    {
+        "slug": "workouttracker",
+        "name": "WorkoutTracker",
+        "github": "https://github.com/Borisserz/WorkoutTracker",
+        "store": "https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106",
+        "blurb": "On-device form analysis. Live Activities, watchOS, Vertex AI coach.",
+        "chips": "Vision · Core ML · Live Activities · watchOS",
+    },
+    {
+        "slug": "foodtracker",
+        "name": "FoodTracker",
+        "github": "https://github.com/Borisserz/FoodTracker",
+        "store": "https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345",
+        "blurb": "Gemini vision meals. Shares an App Group so training load sets macros.",
+        "chips": "HealthKit · Gemini · Computer vision",
+    },
+    {
+        "slug": "fitrpg",
+        "name": "FitRPG",
+        "github": "https://github.com/Borisserz/rpg-fitness",
+        "store": "https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478",
+        "blurb": "Camera rep tracking powers Arena PvP, clans, raids. Free, no IAP.",
+        "chips": "SwiftUI · HealthKit · Firebase",
+    },
+    {
+        "slug": "yoga",
+        "name": "Yoga",
+        "github": "https://github.com/Borisserz/Yoga",
+        "store": "",
+        "blurb": "Real-time pose tracking, joint angles, spoken feedback, leaderboard.",
+        "chips": "Vision · VNHumanBodyPose · Firestore",
+    },
+    {
+        "slug": "stepper",
+        "name": "Stepper",
+        "github": "https://github.com/Borisserz/Stepper",
+        "store": "",
+        "blurb": "Pedometer and route tracker. Work in progress, UI-first.",
+        "chips": "MapKit · Core Location · WIP",
+    },
+]
 
 STATUS = [
     ("Minsk, BY", False),

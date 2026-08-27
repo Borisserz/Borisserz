@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 168" width="1200" height="168" role="img" aria-label="Commits by weekday. Busiest day is Tue.">
+  <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">When I ship</text>
+  <rect x="0" y="41" width="153" height="81" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="76" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Sun</text>
+  <rect x="174" y="52" width="153" height="70" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="250" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Mon</text>
+  <rect x="348" y="36" width="153" height="86" rx="10" fill="#F05138" stroke="#F05138"/>
+  <text x="424" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Tue</text>
+  <rect x="522" y="47" width="153" height="75" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="598" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Wed</text>
+  <rect x="696" y="69" width="153" height="53" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="772" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Thu</text>
+  <rect x="870" y="62" width="153" height="60" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="946" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Fri</text>
+  <rect x="1044" y="47" width="153" height="75" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <text x="1120" y="150" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#8E8E93">Sat</text>
+</svg>
