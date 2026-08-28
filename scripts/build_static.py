@@ -75,7 +75,7 @@ APPS = [
         "slug": "yoga",
         "name": "Yoga",
         "github": "https://github.com/Borisserz/Yoga",
-        "store": "",
+        "store": "https://apps.apple.com/by/app/yoga-coach-relax/id6795662863",
         "blurb": "Real-time pose tracking, joint angles, spoken feedback, leaderboard.",
         "chips": "Vision · VNHumanBodyPose · Firestore",
     },

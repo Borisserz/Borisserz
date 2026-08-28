@@ -124,6 +124,15 @@ class AppReadmeBlockTests(unittest.TestCase):
         self.assertNotIn(".jpg", block)
         self.assertIn("app-workouttracker", block)
 
+    def test_yoga_links_to_app_store(self):
+        yoga = next(app for app in APPS if app["slug"] == "yoga")
+        self.assertIn("id6795662863", yoga["store"])
+        block = app_readme_block("/tmp")
+        self.assertIn(
+            "https://apps.apple.com/by/app/yoga-coach-relax/id6795662863",
+            block,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
