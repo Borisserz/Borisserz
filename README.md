@@ -19,9 +19,9 @@
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202609100855" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/activity-dark.svg?v=202609110853" width="100%" alt="Contribution counters, streaks and a breakdown of languages by bytes of code.">
 </picture>
 
 <picture>
@@ -39,37 +39,37 @@
 <!-- apps:start -->
 <a href="https://apps.apple.com/us/app/ai-workout-coach-gym-tracker/id6774895106">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202609100855" width="100%" alt="WorkoutTracker">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-workouttracker-dark.svg?v=202609110853" width="100%" alt="WorkoutTracker">
 </picture>
 </a>
 <a href="https://apps.apple.com/us/app/foodtracker-ai-macro-tracker/id6778506345">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202609100855" width="100%" alt="FoodTracker">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-foodtracker-dark.svg?v=202609110853" width="100%" alt="FoodTracker">
 </picture>
 </a>
 <a href="https://apps.apple.com/tr/app/fitrpg-fitness-workout-rpg/id6785639478">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202609100855" width="100%" alt="FitRPG">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-fitrpg-dark.svg?v=202609110853" width="100%" alt="FitRPG">
 </picture>
 </a>
 <a href="https://apps.apple.com/by/app/yoga-coach-relax/id6795662863">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202609100855" width="100%" alt="Yoga">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-yoga-dark.svg?v=202609110853" width="100%" alt="Yoga">
 </picture>
 </a>
 <a href="https://github.com/Borisserz/Stepper">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202609100855">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-light.svg?v=202609100855">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202609100855" width="100%" alt="Stepper">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202609110853">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-light.svg?v=202609110853">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/app-stepper-dark.svg?v=202609110853" width="100%" alt="Stepper">
 </picture>
 </a>
 <!-- apps:end -->
@@ -135,18 +135,18 @@
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-repo-06-dark.svg" width="100%" alt="moggerrescure/site">
 </picture>
 </a>
-<a href="https://github.com/CodeEditApp/CodeEdit">
+<a href="https://github.com/iina/iina">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-repo-07-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-repo-07-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-repo-07-dark.svg" width="100%" alt="CodeEditApp/CodeEdit">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-repo-07-dark.svg" width="100%" alt="iina/iina">
 </picture>
 </a>
 <a href="https://github.com/search?q=is%3Apr%20author%3ABorisserz%20-user%3ABorisserz&amp;type=pullrequests">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-more-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-more-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-more-dark.svg" width="100%" alt="and 7 more">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-more-dark.svg" width="100%" alt="and 8 more">
 </picture>
 </a>
 <picture>
@@ -154,25 +154,25 @@
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merges-caption-light.svg">
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merges-caption-dark.svg" width="100%" alt="Latest merges">
 </picture>
-<a href="https://github.com/vorssaint/vorssaint-utils">
+<a href="https://github.com/chattymin/PokeTokenBar">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg" width="100%" alt="vorssaint/vorssaint-utils#1426">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-00-dark.svg" width="100%" alt="chattymin/PokeTokenBar#279">
 </picture>
 </a>
-<a href="https://github.com/OneBusAway/onebusaway-ios">
+<a href="https://github.com/vorssaint/vorssaint-utils">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1298">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-01-dark.svg" width="100%" alt="vorssaint/vorssaint-utils#1562">
 </picture>
 </a>
-<a href="https://github.com/OneBusAway/onebusaway-ios">
+<a href="https://github.com/vorssaint/vorssaint-utils">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg" width="100%" alt="OneBusAway/onebusaway-ios#1379">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/oss-merge-02-dark.svg" width="100%" alt="vorssaint/vorssaint-utils#1426">
 </picture>
 </a>
 <!-- oss:end -->
