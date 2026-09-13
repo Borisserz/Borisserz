@@ -61,7 +61,18 @@ jobs:
           git add assets README.md
           git commit -m "chore: refresh profile cards"
           git pull --rebase origin main
-          git push origin HEAD:main
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "push failed after 3 attempts"
+              exit 1
+            fi
+            echo "push failed (attempt $attempt); retrying in 20s"
+            sleep 20
+            git pull --rebase origin main
+          done
 
       - name: Purge jsDelivr cache
         if: env.GH_STATS_TOKEN != ''
