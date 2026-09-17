@@ -1,15 +1,15 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-dark.svg?v=202609171304">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-light.svg?v=202609171304">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-dark.svg?v=202609171304" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
 </picture>
 
 **Native iOS developer**, third-year CS student. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-light.svg">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg" width="100%" alt="Third-year CS student. Open to iOS internships.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-dark.svg?v=202609171304">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-light.svg?v=202609171304">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-dark.svg?v=202609171304" width="100%" alt="Third-year CS student. Open to iOS internships.">
 </picture>
 
 <picture>

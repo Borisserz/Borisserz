@@ -77,6 +77,6 @@ jobs:
       - name: Purge jsDelivr cache
         if: env.GH_STATS_TOKEN != ''
         run: |
-          for f in assets/activity-*.svg assets/oss-*.svg assets/app-*.svg; do
+          for f in assets/activity-*.svg assets/oss-*.svg assets/app-*.svg assets/hero-*.svg assets/status-*.svg; do
             curl -fsS "https://purge.jsdelivr.net/gh/Borisserz/Borisserz@main/$f" || true
           done
