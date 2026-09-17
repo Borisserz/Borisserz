@@ -195,8 +195,6 @@
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-contact-dark.svg" width="100%" alt="Contact">
 </picture>
 
-[![Telegram](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-telegram-dark.svg)](https://t.me/borisserz)
-[![LinkedIn](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
 [![App Store](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
 
 <p align="center">
