@@ -1,0 +1,82 @@
+name: Cards
+
+# Regenerates the SVG cards in assets/ and commits them. Rendering happens here
+# rather than through a hosted badge service so the profile cannot be broken by
+# somebody else's rate limit.
+
+on:
+  schedule:
+    - cron: "15 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/cards.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # A personal token is needed so the contribution total matches the one the
+      # profile graph shows. Until it exists the data cards are left untouched
+      # rather than rewritten with a lower, public-only number.
+      GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render static assets
+        run: python3 scripts/build_static.py
+
+      - name: Warn when the stats token is missing
+        if: env.GH_STATS_TOKEN == ''
+        run: echo "::warning::GH_STATS_TOKEN is not set; keeping the existing activity and open-source cards"
+
+      - name: Render data cards
+        if: env.GH_STATS_TOKEN != ''
+        run: python3 scripts/build_cards.py
+
+      - name: Commit refreshed cards
+        run: |
+          if [ -z "$(git status --porcelain -- assets README.md)" ]; then
+            echo "cards unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets README.md
+          git commit -m "chore: refresh profile cards"
+          git pull --rebase origin main
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "push failed after 3 attempts"
+              exit 1
+            fi
+            echo "push failed (attempt $attempt); retrying in 20s"
+            sleep 20
+            git pull --rebase origin main
+          done
+
+      - name: Purge jsDelivr cache
+        if: env.GH_STATS_TOKEN != ''
+        run: |
+          for f in assets/activity-*.svg assets/oss-*.svg assets/app-*.svg; do
+            curl -fsS "https://purge.jsdelivr.net/gh/Borisserz/Borisserz@main/$f" || true
+          done
