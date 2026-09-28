@@ -90,7 +90,8 @@ APPS = [
 ]
 
 STATUS = [
-    ("3rd-year CS student", False),
+    ("Minsk, BY", False),
+    ("3rd-year CS @ BSUIR", False),
     ("Open to iOS internships", True),
 ]
 
@@ -107,7 +108,7 @@ STACK = [
                        "Xcode", "Figma", "GitHub Actions", "pytest"]),
 ]
 
-BADGES = [("appstore", "App Store")]
+BADGES = [("telegram", "Telegram"), ("linkedin", "LinkedIn"), ("appstore", "App Store")]
 
 CHIP_H = 40
 CHIP_PAD = 18
@@ -168,7 +169,7 @@ def section_header(title, p):
 
 def status_bar(p):
     height = CHIP_H + 8
-    out = svg_open(height, "3rd-year CS student. Open to iOS internships.")
+    out = svg_open(height, "Minsk, BY. 3rd-year CS at BSUIR. Open to iOS internships.")
     x = 0
     for label, accent in STATUS:
         block, w = chip(x, 4, label, p, accent)

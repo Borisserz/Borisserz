@@ -1,15 +1,15 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-dark.svg?v=202609171304">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-light.svg?v=202609171304">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/hero-dark.svg?v=202609171304" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg?v=202609282055">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-light.svg?v=202609282055">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/hero-dark.svg?v=202609282055" width="100%" alt="Boris, native iOS developer. An Xcode window declares a SwiftUI view next to a preview canvas listing WorkoutTracker, FoodTracker and Stepper.">
 </picture>
 
-**Native iOS developer**, third-year CS student. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
+**Native iOS developer**, third-year CS student at BSUIR in Minsk. I build SwiftUI apps end to end — SwiftData, on-device Core ML and Vision, Live Activities, widgets, watchOS — and the Python services and data pipelines that sit behind them.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-dark.svg?v=202609171304">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-light.svg?v=202609171304">
-  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@3f679b5/assets/status-dark.svg?v=202609171304" width="100%" alt="Third-year CS student. Open to iOS internships.">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg?v=202609282055">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-light.svg?v=202609282055">
+  <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/status-dark.svg?v=202609282055" width="100%" alt="Minsk, BY. Third-year CS at BSUIR. Open to iOS internships.">
 </picture>
 
 <picture>
@@ -195,6 +195,8 @@
   <img src="https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/sec-contact-dark.svg" width="100%" alt="Contact">
 </picture>
 
+[![Telegram](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-telegram-dark.svg)](https://t.me/borisserz)
+[![LinkedIn](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-linkedin-dark.svg)](https://www.linkedin.com/in/boris-serzhanovich-87b95b296)
 [![App Store](https://cdn.jsdelivr.net/gh/Borisserz/Borisserz@main/assets/badge-appstore-dark.svg)](https://apps.apple.com/us/developer/barys-serzhanovich/id6774895109)
 
 <p align="center">

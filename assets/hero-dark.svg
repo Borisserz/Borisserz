@@ -36,7 +36,7 @@
     <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="26" fill="#DFDFE0">
       <text x="76" y="114"><tspan fill="#FF7AB2">struct</tspan> <tspan fill="#6BDFFF">Boris</tspan>: <tspan fill="#6BDFFF">View</tspan> {</text>
       <text x="138" y="147"><tspan fill="#FF7AB2">let</tspan> role = <tspan fill="#FF8170">"Native iOS Developer"</tspan></text>
-      <text x="138" y="180"><tspan fill="#FF7AB2">let</tspan> base = <tspan fill="#FF8170">"3rd-year CS"</tspan></text>
+      <text x="138" y="180"><tspan fill="#FF7AB2">let</tspan> base = <tspan fill="#FF8170">"Minsk, BSUIR"</tspan></text>
       <text x="138" y="213"><tspan fill="#FF7AB2">let</tspan> stack = [.swiftUI, .swiftData]</text>
       <text x="138" y="279"><tspan fill="#FF7AB2">var</tspan> body: <tspan fill="#FF7AB2">some</tspan> <tspan fill="#6BDFFF">View</tspan> {</text>
       <text x="201" y="312"><tspan fill="#6BDFFF">Portfolio</tspan>(shipping: .apps)</text>
