@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 385" width="1200" height="385" role="img" aria-label="2,449 contributions in the last year, 5 day current streak, top language Swift.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 385" width="1200" height="385" role="img" aria-label="2,457 contributions in the last year, 6 day current streak, top language Swift.">
   <rect x="0" y="0" width="386" height="110" rx="14" fill="#2C2C31" stroke="#3B3B41"/>
   <text x="22" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#8E8E93">Contributions (12 mo)</text>
-  <text x="22" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#DFDFE0">2,449</text>
+  <text x="22" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#DFDFE0">2,457</text>
   <rect x="407" y="0" width="386" height="110" rx="14" fill="#2C2C31" stroke="#3B3B41"/>
   <text x="429" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#8E8E93">Current streak</text>
-  <text x="429" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#F05138">5 days</text>
+  <text x="429" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#F05138">6 days</text>
   <rect x="814" y="0" width="386" height="110" rx="14" fill="#2C2C31" stroke="#3B3B41"/>
   <text x="836" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#8E8E93">Longest streak (12 mo)</text>
   <text x="836" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" font-weight="600" fill="#DFDFE0">51 days</text>
@@ -20,26 +20,26 @@
   <text x="0" y="283" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" letter-spacing="1.4" fill="#8E8E93">Languages by bytes of code</text>
   <clipPath id="bar"><rect x="0" y="297" width="1200" height="20" rx="10"/></clipPath>
   <g clip-path="url(#bar)">
-    <rect x="0.0" y="297" width="587.1" height="20" fill="#F05138"/>
-    <rect x="586.1" y="297" width="290.5" height="20" fill="#3572A5"/>
-    <rect x="875.6" y="297" width="193.1" height="20" fill="#3178C6"/>
-    <rect x="1067.7" y="297" width="33.3" height="20" fill="#F1E05A"/>
-    <rect x="1100.1" y="297" width="32.2" height="20" fill="#E34C26"/>
-    <rect x="1131.2" y="297" width="68.8" height="20" fill="#3B3B41"/>
+    <rect x="0.0" y="297" width="567.6" height="20" fill="#F05138"/>
+    <rect x="566.6" y="297" width="300.0" height="20" fill="#3572A5"/>
+    <rect x="865.6" y="297" width="199.7" height="20" fill="#3178C6"/>
+    <rect x="1064.3" y="297" width="33.8" height="20" fill="#E34C26"/>
+    <rect x="1097.2" y="297" width="32.9" height="20" fill="#663399"/>
+    <rect x="1129.1" y="297" width="70.9" height="20" fill="#3B3B41"/>
   </g>
   <rect x="0" y="341" width="164" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="18" cy="361" r="5" fill="#F05138"/>
-  <text x="32" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Swift 48.8%</text>
+  <text x="32" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Swift 47.2%</text>
   <rect x="174" y="341" width="174" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="192" cy="361" r="5" fill="#3572A5"/>
-  <text x="206" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Python 24.1%</text>
+  <text x="206" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">Python 24.9%</text>
   <rect x="358" y="341" width="216" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
   <circle cx="376" cy="361" r="5" fill="#3178C6"/>
-  <text x="390" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">TypeScript 16.0%</text>
-  <rect x="584" y="341" width="206" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
-  <circle cx="602" cy="361" r="5" fill="#F1E05A"/>
-  <text x="616" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">JavaScript 2.7%</text>
-  <rect x="800" y="341" width="143" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
-  <circle cx="818" cy="361" r="5" fill="#E34C26"/>
-  <text x="832" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">HTML 2.6%</text>
+  <text x="390" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">TypeScript 16.6%</text>
+  <rect x="584" y="341" width="143" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <circle cx="602" cy="361" r="5" fill="#E34C26"/>
+  <text x="616" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">HTML 2.7%</text>
+  <rect x="737" y="341" width="133" height="40" rx="10" fill="#2C2C31" stroke="#3B3B41"/>
+  <circle cx="755" cy="361" r="5" fill="#663399"/>
+  <text x="769" y="367" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#DFDFE0">CSS 2.7%</text>
 </svg>
